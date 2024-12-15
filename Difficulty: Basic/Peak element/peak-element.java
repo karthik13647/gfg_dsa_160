@@ -19,18 +19,19 @@ class GFG {
             }
             Solution obj = new Solution();
             int f = 0;
-            int A = obj.peakElement(a);
+            int idx = obj.peakElement(a);
             int n = a.length;
-            if (A < 0 && A >= n)
+            if (idx < 0 && idx >= n)
                 System.out.println("false");
             else {
-                if (n == 1 && A == 0)
+                if (n == 1 && idx == 0)
                     f = 1;
-                else if (A == 0 && a[0] >= a[1])
+                else if (idx == 0 && a[0] > a[1])
                     f = 1;
-                else if (A == n - 1 && a[n - 1] >= a[n - 2])
+                else if (idx == n - 1 && a[n - 1] > a[n - 2])
                     f = 1;
-                else if (A >= 0 && A < n && a[A] >= a[A + 1] && a[A] >= a[A - 1])
+                else if (idx > 0 && idx < n && a[idx] > a[idx + 1] &&
+                         a[idx] > a[idx - 1])
                     f = 1;
                 else
                     f = 0;
@@ -45,6 +46,8 @@ class GFG {
     }
 }
 // } Driver Code Ends
+
+
 
 
 class Solution {
