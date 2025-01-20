@@ -32,23 +32,21 @@ class Node{
 class Solution {
     public Node rotate(Node head, int k) {
         // add code here
-        int size=0;
-        Node head1=head;
-        Node prev=null;
-        while(head1!=null){
-            prev=head1;
-            head1=head1.next;
-            size++;
+        int c=1;
+        Node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
+            c++;
         }
-        k=k%size;
-        while(k-->0){
-            Node temp=head.next;
-            prev.next=head;
-            prev=prev.next;
-            head.next=null;
-            head=temp;
-            
+        k=k%c;
+        if(k==0) return head;
+        temp.next=head;
+        Node temp1=head;
+        for(int i=1;i<k;i++){
+            temp1=temp1.next;
         }
+        head=temp1.next;
+        temp1.next=null;
         return head;
     }
 }
