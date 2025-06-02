@@ -33,3 +33,5 @@ class Solution:
         if a==-1 or b==-1:
             return 0
         return a-b+1
+        
+## here i reverse the lower bound and upper bounds
