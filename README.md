@@ -1,4 +1,3 @@
 # gfg_dsa_160
 
-# It also contains 
- Easy
+# It also contains
