@@ -9,5 +9,5 @@ class Solution:
             if ele<=arr[i]:
                 a.append(arr[i])
                 ele=arr[i]
-        b=a.reverse()
-        return a
+        # b=a.reverse()
+        return a[::-1]
